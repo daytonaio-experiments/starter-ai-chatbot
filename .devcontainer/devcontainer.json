@@ -1,0 +1,34 @@
+{
+    "name": "starter ai chatbot devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "latest"
+      },
+      "ghcr.io/devcontainers/features/git:1": {},
+      "ghcr.io/devcontainers/features/common-utils:2.4.4": {
+            "username": "daytona",
+            "configureZshAsDefaultShell": true
+        }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "svelte.svelte-vscode",
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint",
+          "ms-vscode.vscode-typescript-next"
+        ]
+      }
+    },
+    "portsAttributes": {
+      "5173": {
+        "label": "Vite Dev Server",
+        "onAutoForward": "notify"
+      }
+    },
+    "onCreateCommand": "npm install",
+    "postCreateCommand": "npm run dev",
+    "remoteUser": "daytona"
+  }
+  
