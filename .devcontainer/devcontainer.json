@@ -28,7 +28,6 @@
       }
     },
     "onCreateCommand": "npm install",
-    "postCreateCommand": "npm run dev",
     "remoteUser": "daytona"
   }
   
