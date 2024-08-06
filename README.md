@@ -100,7 +100,7 @@ This configuration includes:
 
 - **name**: Specifies the name of the development environment.
 - **image**: Uses the Microsoft container registry image for typescript and Node.js development.
-- **features**: Adds Node.js, Git, and Zsh with common utilities for the user "daytona.
+- **features**: Adds Node.js, Git, and Zsh with common utilities for the user "daytona".
 - **portsAttributes**: Sets up port forwarding for the Vite development server on port 5173.
 - **customizations**: Installs essential VSCode extensions for Svelte, Prettier, ESLint, and TypeScript.
 - **onCreateCommand**: Installs npm dependencies with npm install upon container creation.
