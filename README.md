@@ -2,7 +2,7 @@
 
 This project is a simple AI chatbot built using Vercel AI SDK, Svelte, and GROQ API. The chatbot provides an interactive interface where users can engage with AI-driven responses. The project is set up with a devcontainer configuration for easy development setup using Daytona.
 
-![ai-chatbot-v1](https://github.com/user-attachments/assets/8c7d2921-fc58-4c43-aa4e-89ac5d3fdfb6)
+![ai-chatbot-v2](https://github.com/user-attachments/assets/ed0cf635-7fe6-4e9c-8136-59906ad28148)
 
 ## Features
 
