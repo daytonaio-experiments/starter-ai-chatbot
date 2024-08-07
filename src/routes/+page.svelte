@@ -71,21 +71,20 @@
       {/each}
     </div>
 
-    {#if $error}
-      <div class="mt-4">
+    <form on:submit={handleSubmit} class="form">
+      <img src="/Frame 301.svg" alt="Frame" class="svg-frame" />
+      {#if $error}
+      <div class="mt-4 text-gray-500">
         <div class="text-red-500">An error occurred.</div>
         <button
           type="button"
-          class="px-4 py-2 mt-4 text-blue-500 border border-blue-500 rounded-md"
+          class="stop-button"
           on:click={() => reload()}
         >
           Retry
         </button>
       </div>
     {/if}
-
-    <form on:submit={handleSubmit} class="form">
-      <img src="/Frame 301.svg" alt="Frame" class="svg-frame" />
       {#if $isLoading}
       <div class="mt-4 text-gray-500">
         <div>Loading...</div>
