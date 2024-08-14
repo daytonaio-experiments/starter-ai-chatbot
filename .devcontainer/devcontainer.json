@@ -21,13 +21,14 @@
         ]
       }
     },
+    "workspaceFolder": "/workspaces/starter-ai-chatbot",
     "portsAttributes": {
       "5173": {
         "label": "Vite Dev Server",
         "onAutoForward": "notify"
       }
     },
-    "onCreateCommand": "npm install",
+    "postCreateCommand": "npm install",
     "remoteUser": "daytona"
   }
   
