@@ -30,7 +30,7 @@
       "onAutoForward": "notify"
     }
   },
-  "workspaceFolder": "/workspaces/daytona-groq-chatbot",
+  "workspaceFolder": "/workspaces/starter-ai-chatbot",
   "postCreateCommand": "npm install",
   "remoteUser": "daytona"
 }
