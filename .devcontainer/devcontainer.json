@@ -1,6 +1,6 @@
 {
   "name": "starter ai chatbot devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "image": "node:20",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2.4.7": {
           "username": "daytona",
