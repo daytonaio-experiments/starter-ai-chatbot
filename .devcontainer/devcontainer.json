@@ -1,34 +1,36 @@
 {
-    "name": "starter ai chatbot devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/typescript-node",
-    "features": {
-      "ghcr.io/devcontainers/features/node:1": {
-        "version": "latest"
-      },
-      "ghcr.io/devcontainers/features/git:1": {},
-      "ghcr.io/devcontainers/features/common-utils:2.4.4": {
-            "username": "daytona",
-            "configureZshAsDefaultShell": true
-        }
+  "name": "starter ai chatbot devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2.4.7": {
+          "username": "daytona",
+          "configureZshAsDefaultShell": true
     },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "svelte.svelte-vscode",
-          "esbenp.prettier-vscode",
-          "dbaeumer.vscode-eslint",
-          "ms-vscode.vscode-typescript-next"
-        ]
-      }
-    },
-    "workspaceFolder": "/workspaces/starter-ai-chatbot",
-    "portsAttributes": {
-      "5173": {
-        "label": "Vite Dev Server",
-        "onAutoForward": "notify"
-      }
-    },
-    "postCreateCommand": "npm install",
-    "remoteUser": "daytona"
-  }
-  
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "overrideFeatureInstallOrder": [
+      "ghcr.io/devcontainers/features/common-utils",
+      "ghcr.io/devcontainers/features/git",
+      "ghcr.io/devcontainers-contrib/features/typescript"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "workspaceFolder": "/workspaces/daytona-groq-chatbot",
+  "postCreateCommand": "npm install",
+  "remoteUser": "daytona"
+}
