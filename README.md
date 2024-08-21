@@ -65,17 +65,28 @@ The project includes a devcontainer configuration for seamless development in a 
 ```json
 {
   "name": "starter ai chatbot devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+  "image": "ubuntu:22.04",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/common-utils:2.4.4": {
+    "ghcr.io/devcontainers/features/common-utils:2.4.7": {
       "username": "daytona",
+      "userUid": 1000,
+      "userGid": 1000,
       "configureZshAsDefaultShell": true
-    }
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "lts",
+      "nvmVersion": "0.40.0"
+    },
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
   },
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/devcontainers/features/node",
+    "ghcr.io/devcontainers-contrib/features/typescript"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -92,19 +103,22 @@ The project includes a devcontainer configuration for seamless development in a 
       "onAutoForward": "notify"
     }
   },
-  "onCreateCommand": "npm install",
+  "workspaceFolder": "/workspaces/starter-ai-chatbot",
+  "postCreateCommand": "npm install",
   "remoteUser": "daytona"
 }
 ```
 This configuration includes:
 
-- **name**: Specifies the name of the development environment.
-- **image**: Uses the Microsoft container registry image for typescript and Node.js development.
-- **features**: Adds Node.js, Git, and Zsh with common utilities for the user "daytona".
-- **portsAttributes**: Sets up port forwarding for the Vite development server on port 5173.
-- **customizations**: Installs essential VSCode extensions for Svelte, Prettier, ESLint, and TypeScript.
-- **onCreateCommand**: Installs npm dependencies with npm install upon container creation.
-- **remoteUser**: Sets the remote user to "daytona".
+- **name**: Defines the name of the development environment as "starter ai chatbot devcontainer".
+- **image**: Uses the base image "ubuntu:22.04" for the development container.
+- **features**: Includes common utilities, Node.js (LTS), TypeScript, and Git for the user "daytona".
+- **overrideFeatureInstallOrder**: Specifies the installation order to ensure proper setup.
+- **customizations**: Installs VSCode extensions for Svelte, Prettier, ESLint, and TypeScript.
+- **portsAttributes**: Sets up port forwarding for the Vite Dev Server on port 5173 with a notification.
+- **workspaceFolder**: Specifies the workspace folder as "/workspaces/starter-ai-chatbot".
+- **postCreateCommand**: Runs `npm install` to install dependencies upon container creation.
+- **remoteUser**: Sets the remote user to "daytona" for the development environment.
 
 ## Why Daytona?
 
