@@ -30,7 +30,7 @@ This project is a simple AI chatbot built using Vercel AI SDK, Svelte, and GROQ 
 
 **Steps to Set Up Daytona Workspace**
 
-1. Create Daytona Workspace:
+1. Create and Open in Daytona Workspace:
 
 ```
 daytona create https://github.com/daytonaio-experiments/starter-ai-chatbot.git --code
