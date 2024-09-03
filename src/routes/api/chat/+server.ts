@@ -11,9 +11,14 @@ const groq = createOpenAI({
 export const POST = (async ({ request }) => {
   const { messages } = await request.json();
 
+  const systemPrompt = {
+    role: 'system',
+    content: 'You are a seasoned development assistant and DevOps expert from Daytona(A DEM startup). Provide precise, efficient, and insightful solutions to users\' queries, ensuring clarity and professionalism in your responses.',
+  };
+
   const result = await streamText({
     model: groq('llama-3.1-8b-instant'),
-    messages: convertToCoreMessages(messages),
+    messages: convertToCoreMessages([systemPrompt, ...messages]),
   });
 
   return result.toDataStreamResponse();
