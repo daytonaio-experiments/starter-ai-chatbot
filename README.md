@@ -2,7 +2,7 @@
 
 This project is a simple AI chatbot built using Vercel AI SDK, Svelte, and GROQ API. The chatbot provides an interactive interface where users can engage with AI-driven responses. The project is set up with a devcontainer configuration for easy development setup using Daytona.
 
-![ai-chatbot-v2](https://github.com/user-attachments/assets/ed0cf635-7fe6-4e9c-8136-59906ad28148)
+![](/docs/assets/ai-chatbot-image.png)
 
 ## Features
 
@@ -33,26 +33,14 @@ This project is a simple AI chatbot built using Vercel AI SDK, Svelte, and GROQ 
 1. Create Daytona Workspace:
 
 ```
-daytona create https://github.com/daytonaio-experiments/starter-ai-chatbot.git
+daytona create https://github.com/daytonaio-experiments/starter-ai-chatbot.git --code
 ```
 
-2. Select Preferred IDE:
-
-```
-daytona ide
-```
-
-3. Open the Workspace:
-
-```
-daytona code
-```
-
-4. Create a .env file in the root directory and add the following line:
+2. Create a .env file in the root directory and add the following line:
 ```
 GROQ_API_KEY="<YOUR_GROQ_API_KEY>"
 ```
-5. Run the application using:
+3. Run the application using:
 ```
 npm run dev
 ```
