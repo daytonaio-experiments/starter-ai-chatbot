@@ -1,5 +1,7 @@
 # AI ChatBot Starter with Vercel AI SDK, Svelte, and Groq
 
+Read the full guide on [Dotfiles Blog](https://www.daytona.io/dotfiles/build-an-ai-chatbot-with-svelte-vercel-ai-sdk-and-daytona).
+
 This project is a simple AI chatbot built using Vercel AI SDK, Svelte, and GROQ API. The chatbot provides an interactive interface where users can engage with AI-driven responses. The project is set up with a devcontainer configuration for easy development setup using Daytona.
 
 ![](/docs/assets/ai-chatbot-image-1.png)
